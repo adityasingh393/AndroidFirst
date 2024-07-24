@@ -1,3 +1,11 @@
+### Image
+
+![Screenshot from 2024-07-24 17-54-27](https://github.com/user-attachments/assets/ec96dc60-9311-44b8-a515-d4b700ce1a8b)
+
+file:///home/aditya/Pictures/Screenshots/Screenshot%20from%202024-07-24%2017-54-27.png
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
