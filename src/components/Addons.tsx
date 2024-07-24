@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "../styles/AddOnStyles";
-const addOns = [
-    { img: require('../assests/pepper.png'), name: "Pepper Julinned", price: "+$2.30" },
-    { img: require('../assests/spinach.png'), name: "Baby Spinach", price: "+$4.70" },
-    { img: require('../assests/masroom.png'), name: "Mushroom", price: "+$2.50" }
-];
-const Addons: React.FC = () => {
+import { AddonsProps } from "../Interfaces/types";
+
+const Addons: React.FC<AddonsProps> = ({ addOns }) => {
     const [selectedAddon, setSelectedAddon] = useState<string | null>(null);
+
     const handleAddonSelect = (addonName: string) => {
         setSelectedAddon(addonName);
     };
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Choice of Add Ons</Text>

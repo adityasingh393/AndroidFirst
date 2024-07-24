@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { Image } from '@rneui/themed';
 import Description from './Description';
 import styles from '../styles/topimage';
+import { ImageContainerProps } from '../Interfaces/types';
 
-const ImageContainer: React.FC = () => {
+const ImageContainer: React.FC<ImageContainerProps> = (props) => {
     const [quantity, setQuantity] = useState(6);
 
     const incrementQuantity = () => {
@@ -34,26 +35,26 @@ const ImageContainer: React.FC = () => {
             <View style={styles.bigContainer}>
                 <View style={styles.headerImages}>
                     <TouchableOpacity onPress={handleHeartPress}>
-                        <Image style={styles.heart} source={require('../assests/fav.png')} />
+                        <Image style={styles.heart} source={props.heartImage} />
                     </TouchableOpacity>
-                    <Image style={styles.container} source={require('../assests/image57.png')} />
+                    <Image style={styles.container} source={props.mainImage} />
                     <TouchableOpacity onPress={handleBackPress}>
-                        <Image style={styles.backButton} source={require('../assests/backButton.png')} />
+                        <Image style={styles.backButton} source={props.backButtonImage} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.titleContainer}>
-                    <Text style={styles.titleContent}>Ground Beef Tacos</Text>
+                    <Text style={styles.titleContent}>{props.title}</Text>
                 </View>
                 <View style={styles.ratingContainer}>
-                    <Image style={styles.ratingImage} source={require('../assests/ratingStar.png')} />
-                    <Text style={styles.ratingValue}>4.5</Text>
-                    <Text style={styles.ratingCount}>(30+)</Text>
+                    <Image style={styles.ratingImage} source={props.ratingStarImage} />
+                    <Text style={styles.ratingValue}>{props.ratingValue}</Text>
+                    <Text style={styles.ratingCount}>{props.ratingCount}</Text>
                     <TouchableOpacity onPress={handleSeeReviewPress}>
                         <Text style={styles.reviewButton}>See Review</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.PriceContainer}>
-                    <Text style={styles.Price}>$9.50</Text>
+                    <Text style={styles.Price}>{props.price}</Text>
                     <View style={styles.align}>
                         <TouchableOpacity onPress={decrementQuantity}>
                             <Image style={styles.minus} source={require('../assests/minus.png')} />
