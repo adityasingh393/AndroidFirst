@@ -7,6 +7,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
     },
+    headerImages: {
+        position: 'relative'
+    },
+    backButton: {
+        position: 'absolute',
+        width: 100,
+        height: 100,
+        backgroundColor: 'black'
+    },
+    heart: {
+        position: 'absolute',
+        zIndex: 2,
+        width: 200,
+        height: 100,
+    },
     bigContainer: {
         width: 323,
         height: 206,
@@ -16,6 +31,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 10,
+        // position: 'relative'
+        // zIndex: 1
     },
     titleContainer: {
         padding: 5,
@@ -53,6 +70,8 @@ const styles = StyleSheet.create({
     PriceContainer: {
         width: 329.6,
         height: 30.6,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         // alignSelf: "flex-start",
         borderRadius: 20,
         marginBottom: 10,
@@ -69,91 +88,26 @@ const styles = StyleSheet.create({
         color: '#FE724C',
     },
     plus: {
-        backgroundColor: "white",
-    }
-    ,
+        // backgroundColor: "#FE724C",
+        width: 70,
+        height: 40,
+        marginLeft: -8,
+        padding: 30
+        // color: 'black'
+    },
+    txt: {
+        fontSize: 20,
+        marginTop: 5
+    },
     minus: {
-        backgroundColor: "#FE724C"
+        // backgroundColor: "white",
+        width: 80,
+        height: 50,
+        padding: 30,
+        marginRight: -10,
+        marginTop: 7
+        // color: 'black'
     }
 });
 
 export default styles;
-
-
-// font-family: Sofia Pro;
-// font-size: 28px;
-// font-weight: 600;
-// line-height: 32.2px;
-// letter-spacing: -0.02em;
-// text-align: left;
-
-
-// import { StyleSheet } from 'react-native';
-
-// const styles = StyleSheet.create({
-//     bigContainer: {
-//         position: 'relative',
-//         width: '100%',
-//         height: 242,
-//         marginBottom: 10,
-//     },
-//     image: {
-//         width: '100%',
-//         height: '100%',
-//         borderRadius: 10,
-//     },
-//     backButton: {
-//         position: 'absolute',
-//         top: 10,
-//         left: 10,
-//         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-//         padding: 10,
-//         borderRadius: 5,
-//     },
-//     favoriteButton: {
-//         position: 'absolute',
-//         top: 10,
-//         right: 10,
-//         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-//         padding: 10,
-//         borderRadius: 5,
-//     },
-//     buttonText: {
-//         color: 'white',
-//         fontSize: 16,
-//     },
-//     title: {
-//         paddingHorizontal: 20,
-//         marginBottom: 10,
-//     },
-//     titleContent: {
-//         fontSize: 28,
-//         fontWeight: '600',
-//         lineHeight: 32.2,
-//         letterSpacing: -0.02,
-//         textAlign: 'left',
-//     },
-//     ratingContainer: {
-//         flex: 1,
-//         flexDirection: 'row',
-//         alignItems: 'center',
-//         paddingHorizontal: 20,
-//     },
-//     ratingItems: {
-//         color: 'black',
-//         fontSize: 22,
-//         marginRight: 10,
-//     },
-//     ratingLink: {
-//         color: 'blue',
-//         fontSize: 22,
-//         textDecorationLine: 'underline',
-//     },
-//     ratingImage: {
-//         width: 24,
-//         height: 24,
-//         marginRight: 5,
-//     },
-// });
-
-// export default styles;
