@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
+        width: 390,
         paddingHorizontal: 20,
         paddingVertical: 10,
         marginBottom: 20,
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     },
     addOnPrice: {
         fontSize: 16,
-        color: '#FE724C',
+        color: 'black',
         marginRight: 10,
     },
     radioButton: {

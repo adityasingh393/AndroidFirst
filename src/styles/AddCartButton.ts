@@ -7,22 +7,28 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        width: '45%',
+        width: '50%',
         backgroundColor: "#FE724C",
-        borderRadius: 30
+        borderRadius: 50,
     },
     buttonContent: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 10
+        padding: 10,
+    },
+    imageContainer: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        backgroundColor: "white",
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginRight: 10,
     },
     image: {
         width: 25,
         height: 25,
-        borderRadius: 30,
-        marginRight: 10,
-        backgroundColor: "white",
     },
     buttonText: {
         fontSize: 18,
@@ -30,4 +36,5 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 });
+
 export default styles;
